@@ -1,0 +1,9 @@
+name: UltraHardCore
+version: '${version}'
+main: com.uhc.spigot.Main
+api-version: 1.13
+website: github.com/Mehran1022mm/UltraHardCore
+commands:
+  unban:
+    aliases:
+      - ultrahardcore:unban

@@ -1,0 +1,16 @@
+# Punishment Options
+Punishment:
+  Reason: "&cYou Are Dead"
+  Ban: true
+
+Title:
+  # Title Message When Player Died.
+  TitleMessage: "&cYou Are Dead"
+  # SubTitle Message When Player Died.
+  SubTitleMessage: "&7You Can Edit This In Config.yml"
+  # Fade In Time - Per Tick - 20 Tick = 1 Second
+  FadeIn: 20
+  # Stay Time - Per Tick - 20 Tick = 1 Second
+  Stay: 50
+  # Fade Out Time - Per Tick - 20 Tick = 1 Second
+  FadeOut: 20
