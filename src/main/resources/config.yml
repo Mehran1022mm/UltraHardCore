@@ -3,6 +3,14 @@ Punishment:
   Reason: "&cYou Are Dead"
   Ban: true
 
+# Join Announcement Options - Use {PlayerName} For Player Name
+JoinOptions:
+  Enabled: true
+  FirstJoinAnnouncementMessage: "&a&l+&7 {PlayerName} &eJust Logged In For The First Time"
+  JoinAnnouncementMessage: "&a&l+ &eEveryone Welcome&7 {PlayerName}"
+  QuitAnnouncementMessage: "&c&l- &eEveryone Say GoodBye To&7 {PlayerName}"
+
+
 Title:
   # Title Message When Player Died.
   TitleMessage: "&cYou Are Dead"

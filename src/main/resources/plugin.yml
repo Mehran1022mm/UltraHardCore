@@ -4,6 +4,8 @@ main: com.uhc.spigot.Main
 api-version: 1.13
 website: github.com/Mehran1022mm/UltraHardCore
 commands:
+  playtime:
+    description: "see ur playtime."
   unban:
-    aliases:
-      - ultrahardcore:unban
+    description: "unban players."
+

@@ -1,6 +1,9 @@
 package com.uhc.spigot;
 
+import com.uhc.spigot.Commands.PlayTimeCommand;
 import com.uhc.spigot.Commands.UnBanCommand;
+import com.uhc.spigot.Events.PlayerDisconnectEvent;
+import com.uhc.spigot.Events.PlayerJoinEvent;
 import com.uhc.spigot.Events.RespawnEvent;
 import com.uhc.spigot.UpdateChecker.UpdateCheck;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,11 +27,14 @@ public final class Main extends JavaPlugin {
 
     private void setupCommands() {
         getCommand("unban").setExecutor(new UnBanCommand());
+        getCommand("playtime").setExecutor(new PlayTimeCommand());
         getServer().getConsoleSender().sendMessage("[UltraHardCore] Loaded Commands");
     }
 
     private void setupEvents() {
         getServer().getPluginManager().registerEvents(new RespawnEvent(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinEvent(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerDisconnectEvent(this), this);
         getServer().getConsoleSender().sendMessage("[UltraHardCore] Loaded Listeners");
     }
 
