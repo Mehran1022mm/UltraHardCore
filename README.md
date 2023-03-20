@@ -1,8 +1,10 @@
-# 🔗 UltraHardCore
-UltraHardCore is a plugin that when you die you go into spectator mode and can no longer go into survival or creative mode.
+[​IMG]
+UltraHardCore is a core plugin designed to enhance the survival experience on Minecraft servers. It adds new features and commands that make survival gameplay more challenging and rewarding for players.
 
-![100307](https://user-images.githubusercontent.com/102294006/223111514-0e1b5e60-ff1b-4e54-99f2-fa99a5442530.png)
+Moreover, UltraHardCore offers new commands that allow server administrators to customize the gameplay experience. They can adjust the difficulty of the game or enable/disable specific features to meet the needs of their server and player base.
 
-This plugin is mostly used in friendly servers and FFA servers
-Of course, this plugin can also be used in RP servers.
-This plugin is in test mode. If you see a bug or issue, write to us in the issues section.
+Overall, UltraHardCore is a powerful core plugin that enhances the survival experience on Minecraft servers. It introduces new features and commands that provide players with a more challenging and rewarding gameplay experience, while also giving server administrators the flexibility to customize the game to their liking.[​IMG]
+
+Download Latest Release.
+Put .jar File In Your ./plugin Folder
+Run The Server And Customize The config.yml
