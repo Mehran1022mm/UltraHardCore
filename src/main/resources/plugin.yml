@@ -8,4 +8,22 @@ commands:
     description: "see ur playtime."
   unban:
     description: "unban players."
+  ultrahardcore:
+    description: "plugin main command."
+  ping:
+    description: "return player ping."
+  alert:
+    description: "broadcast your message."
+  socialmedia:
+    description: "socialmedia command."
+    aliases:
+      - social-media
+      - social
+      - media
+  clearchat:
+    description: "clears the chat."
+  freeze:
+    description: "freeze someone."
+  unfreeze:
+    description: "unfreeze someone."
 

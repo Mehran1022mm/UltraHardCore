@@ -1,3 +1,11 @@
+# Thanks For Using My Plugin.
+# Permissions:
+# - ultrahardcore.unban
+# - ultrahardcore.alert
+# - ultrahardcore.reload
+# - ultrahardcore.clearchat
+# - ultrahardcore.freeze
+
 # Punishment Options
 Punishment:
   Reason: "&cYou Are Dead"
@@ -10,6 +18,26 @@ JoinOptions:
   JoinAnnouncementMessage: "&a&l+ &eEveryone Welcome&7 {PlayerName}"
   QuitAnnouncementMessage: "&c&l- &eEveryone Say GoodBye To&7 {PlayerName}"
 
+# /Social-Media URLs
+SocialMedia:
+  Website-URL: "https://www.yourwebsite.ultrahardcore"
+  Instagram-URL: "https://www.instagram.com"
+  Discord-URL: "https://www.discord.gg"
+
+# ActionBar XYZ Options
+ActionBarOptions:
+  Enabled: true
+
+# AntiSpam Options
+AntiSpam:
+  Enabled: true
+
+# Forced ResourcePack Options
+ForcedResourcePack:
+  Enabled: false
+  # ResourcePack .ZIP File URL - Our Official Hardcore Heart Pack:
+  # https://uupload.ir/view/ultrahardcore_2a4.zip
+  ResourcePackURL: "https://uupload.ir/view/ultrahardcore_2a4.zip"
 
 Title:
   # Title Message When Player Died.

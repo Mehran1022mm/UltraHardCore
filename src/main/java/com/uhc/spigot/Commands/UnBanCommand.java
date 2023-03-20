@@ -13,7 +13,7 @@ public class UnBanCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!cmd.getName().equalsIgnoreCase("unban")) {
-            return false;
+            return true;
         }
 
         if (!sender.hasPermission("ultrahardcore.unban")) {

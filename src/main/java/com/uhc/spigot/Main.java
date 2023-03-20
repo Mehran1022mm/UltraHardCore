@@ -1,24 +1,14 @@
 package com.uhc.spigot;
 
-import com.uhc.spigot.Commands.PlayTimeCommand;
-import com.uhc.spigot.Commands.UnBanCommand;
-import com.uhc.spigot.Events.PlayerDisconnectEvent;
-import com.uhc.spigot.Events.PlayerJoinEvent;
-import com.uhc.spigot.Events.RespawnEvent;
+import com.uhc.spigot.Commands.*;
+import com.uhc.spigot.Events.*;
 import com.uhc.spigot.UpdateChecker.UpdateCheck;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
 
-    private static Main instance;
-
-    public static Main getInstance() {
-        return instance;
-    }
-
     @Override
     public void onEnable() {
-        instance = this;
         saveDefaultConfig();
         setupCommands();
         setupEvents();
@@ -26,14 +16,24 @@ public final class Main extends JavaPlugin {
     }
 
     private void setupCommands() {
+        getCommand("ping").setExecutor(new PingCommand());
+        getCommand("alert").setExecutor(new AlertCommand());
         getCommand("unban").setExecutor(new UnBanCommand());
+        getCommand("freeze").setExecutor(new FreezeCommand());
+        getCommand("unfreeze").setExecutor(new UnFreezeCommand());
         getCommand("playtime").setExecutor(new PlayTimeCommand());
+        getCommand("clearchat").setExecutor(new ClearChatCommand());
+        getCommand("socialmedia").setExecutor(new SocialMediaCommand(this));
+        getCommand("ultrahardcore").setExecutor(new UltraHardCoreCommand(this));
         getServer().getConsoleSender().sendMessage("[UltraHardCore] Loaded Commands");
     }
 
     private void setupEvents() {
         getServer().getPluginManager().registerEvents(new RespawnEvent(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerChatEvent(this), this);
+        getServer().getPluginManager().registerEvents(new ActionBarEvent(this), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(this), this);
+        getServer().getPluginManager().registerEvents(new SocialMediaCommand(this), this);
         getServer().getPluginManager().registerEvents(new PlayerDisconnectEvent(this), this);
         getServer().getConsoleSender().sendMessage("[UltraHardCore] Loaded Listeners");
     }
@@ -50,5 +50,6 @@ public final class Main extends JavaPlugin {
             getServer().getConsoleSender().sendMessage("[UltraHardCore] Loaded Updater");
         });
     }
+
 }
 
