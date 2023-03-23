@@ -23,7 +23,7 @@ public class SocialMediaCommand implements Listener, CommandExecutor {
             sender.sendMessage(color("[UltraHardCore] Invalid Argument. /SocialMedia [Discord,Website,Instagram]"));
             return true;
         }
-        
+
         if (args.length > 0 && args[0].equalsIgnoreCase("discord")) {
             sender.sendMessage(color("&b&l(!)&9 Discord Server URL"));
             sender.sendMessage(color("&b&l(!)&b " + configuration.getString("SocialMedia.Discord-URL")));
