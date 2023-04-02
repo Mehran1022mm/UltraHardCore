@@ -17,8 +17,11 @@ JoinOptions:
   FirstJoinAnnouncementMessage: "&a&l+&7 {PlayerName} &eJust Logged In For The First Time"
   JoinAnnouncementMessage: "&a&l+ &eEveryone Welcome&7 {PlayerName}"
   QuitAnnouncementMessage: "&c&l- &eEveryone Say GoodBye To&7 {PlayerName}"
+#  JoinDiscordWebhook:
+#    Enabled: false  # This option is unavailable currently.
+#    Webhook-URL: "paste your discord webhook url here."
 
-# /Social-Media URLs
+# /SocialMedia URLs
 SocialMedia:
   Website-URL: "https://www.yourwebsite.ultrahardcore"
   Instagram-URL: "https://www.instagram.com"
@@ -28,8 +31,20 @@ SocialMedia:
 ActionBarOptions:
   Enabled: true
 
+# Sleep Options
+SleepOptions:
+  OnePlayerSleep:
+    Enabled: true
+    # WakeUp Message Will Not Be Sent When Option Is Disabled - Enabled: false
+    WakeUpMessage: "&aGood Morning!"
+
 # AntiSpam Options
 AntiSpam:
+  Enabled: true
+
+# AntiSwear Options
+AntiSwear:
+  # You Can Remove/Add Banned Words In plugins/UltraHardCore/Banned-Words.txt
   Enabled: true
 
 # Forced ResourcePack Options
@@ -39,6 +54,7 @@ ForcedResourcePack:
   # https://uupload.ir/view/ultrahardcore_2a4.zip
   ResourcePackURL: "https://uupload.ir/view/ultrahardcore_2a4.zip"
 
+# Death Title Options
 Title:
   # Title Message When Player Died.
   TitleMessage: "&cYou Are Dead"

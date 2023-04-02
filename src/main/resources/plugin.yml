@@ -16,10 +16,7 @@ commands:
     description: "broadcast your message."
   socialmedia:
     description: "socialmedia command."
-    aliases:
-      - social-media
-      - social
-      - media
+    aliases: [social, media, social-media]
   clearchat:
     description: "clears the chat."
   freeze:

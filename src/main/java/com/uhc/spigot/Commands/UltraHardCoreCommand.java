@@ -1,6 +1,6 @@
 package com.uhc.spigot.Commands;
 
-import com.uhc.spigot.Main;
+import com.uhc.spigot.Configuration;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,12 +9,6 @@ import org.bukkit.command.CommandSender;
 
 public class UltraHardCoreCommand implements CommandExecutor {
 
-    private final Main plugin;
-
-    public UltraHardCoreCommand (Main plugin) {
-        this.plugin = plugin;
-    }
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
@@ -22,9 +16,8 @@ public class UltraHardCoreCommand implements CommandExecutor {
                 sender.sendMessage(ChatColor.RED + "[UltraHardCore] You do not have permission to reload the plugin configuration.");
                 return true;
             }
-            plugin.saveDefaultConfig();
-            plugin.reloadConfig();
-            sender.sendMessage(ChatColor.GREEN + "[UltraHardCore] Configuration reloaded.");
+            Configuration.loadConfig();
+            sender.sendMessage(ChatColor.RED + "[UltraHardCore] Config Reloaded.");
             return true;
         }
 

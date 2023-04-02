@@ -1,10 +1,9 @@
 package com.uhc.spigot.Listeners;
 
-import com.uhc.spigot.Main;
+import com.uhc.spigot.Configuration;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,17 +11,9 @@ import org.bukkit.event.player.PlayerMoveEvent;
 
 public class ActionBarEvent implements Listener {
 
-    private final Main plugin;
-    private final FileConfiguration configuration;
-
-    public ActionBarEvent (Main plugin) {
-        this.plugin = plugin;
-        this.configuration = plugin.getConfig();
-    }
-
     @EventHandler
     public void OnPlayerJoin (PlayerMoveEvent event) {
-        if (!configuration.getBoolean("ActionBarOptions.Enabled")) {
+        if (!Configuration.ACTIONBAROPTIONS_ENABLED) {
             return;
         }
         Player Player = event.getPlayer();
